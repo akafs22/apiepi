@@ -22,5 +22,17 @@
             Alteração conforme dados passados para o id informado
             </summary>
         </member>
+        <member name="T:apiepi.Migrations.identity">
+            <inheritdoc />
+        </member>
+        <member name="M:apiepi.Migrations.identity.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:apiepi.Migrations.identity.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:apiepi.Migrations.identity.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

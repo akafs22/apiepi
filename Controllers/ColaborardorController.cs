@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using apiepi.Context;
 using apiepi.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace apiepi.Controllers
 {
@@ -51,6 +52,7 @@ namespace apiepi.Controllers
 
         // GET: api/Colaborardor/5
         [HttpGet("{id}")]
+        [Authorize("Admin")]
         public async Task<ActionResult<Colaborador>> GetColaborador(int id)
         {
           if (_context.Colaboradors == null)
@@ -73,6 +75,7 @@ namespace apiepi.Controllers
         // PUT: api/Colaborardor/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize("Admin")]
         public async Task<IActionResult> PutColaborador(int id, Colaborador colaborador)
         {
             if (id != colaborador.CodigoId)
@@ -132,6 +135,7 @@ namespace apiepi.Controllers
 
         // DELETE: api/Colaborardor/5
         [HttpDelete("{id}")]
+        [Authorize("Admin")]
         public async Task<IActionResult> DeleteColaborador(int id)
         {
             if (_context.Colaboradors == null)

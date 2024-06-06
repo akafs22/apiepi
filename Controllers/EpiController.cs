@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using apiepi.Context;
 using apiepi.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace apiepi.Controllers
 {
@@ -47,6 +48,7 @@ namespace apiepi.Controllers
 
         // GET: api/Epi/5
         [HttpGet("{id}")]
+        [Authorize("Admin")]
         public async Task<ActionResult<Epi>> GetEpi(int id)
         {
           if (_context.Epis == null)
@@ -70,6 +72,7 @@ namespace apiepi.Controllers
         // PUT: api/Epi/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize("Admin")]
         public async Task<IActionResult> PutEpi(int id, Epi epi)
         {
             if (id != epi.EpiId)
@@ -129,6 +132,7 @@ namespace apiepi.Controllers
 
         // DELETE: api/Epi/5
         [HttpDelete("{id}")]
+        [Authorize("Admin")]
         public async Task<IActionResult> DeleteEpi(int id)
         {
             if (_context.Epis == null)

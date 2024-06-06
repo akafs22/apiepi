@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using apiepi.Models;
+using apiepi.Controllers;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace apiepi.Context;
 
-public partial class AppDbContext : DbContext
+public partial class AppDbContext : IdentityDbContext<ApplicationUser>
 {
     public AppDbContext()
     {
@@ -100,7 +102,9 @@ public partial class AppDbContext : DbContext
                 .HasColumnName("observacao");
         });
 
-        OnModelCreatingPartial(modelBuilder);
+
+
+        base.OnModelCreating(modelBuilder);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

@@ -280,3 +280,7 @@ C:\Dev\apiepi\obj\Debug\net7.0\apiepi.genruntimeconfig.cache
 C:\Dev\apiepi\obj\Debug\net7.0\ref\apiepi.dll
 C:\Dev\apiepi\bin\Debug\net7.0\apiepi.xml
 C:\Dev\apiepi\obj\Debug\net7.0\apiepi.xml
+C:\Dev\apiepi\bin\Debug\net7.0\apiepi.staticwebassets.runtime.json
+C:\Dev\apiepi\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Dev\apiepi\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Dev\apiepi\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll

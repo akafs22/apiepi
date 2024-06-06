@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace apiepi.Models;
 
@@ -15,7 +16,8 @@ public partial class Entrega
 
     public DateOnly DtValidade { get; set; }
 
+    [JsonIgnore]
     public virtual Colaborador? Colaborador { get; set; }
-
+    [JsonIgnore]
     public virtual Epi? Epi { get; set; }
 }
