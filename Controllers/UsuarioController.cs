@@ -102,6 +102,11 @@ public class UsuarioController : ControllerBase
 
     private UserToken BuildToken(UserInfo userInfo, IList<string> userRoles)
     {
+        int idCol = 0;
+        var colaborador = _context.Colaboradors.FirstOrDefault(c=>c.Cpf==userInfo.Cpf);
+        if (colaborador != null){
+            idCol = colaborador.CodigoId;
+        }
         var claims = new List<Claim>
         {
             new Claim(JwtRegisteredClaimNames.UniqueName, userInfo.Email),
